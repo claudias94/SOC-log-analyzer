@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClausFitke SOC Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+        h1 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #34495e; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .severity-high { color: red; font-weight: bold; }
+        .severity-medium { color: orange; font-weight: bold; }
+        .severity-low { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>ClausFitke SOC Dashboard</h1>
+
+    <p><strong>Root sessions detected:</strong> {{ data.root_sessions }}</p>
+    <p><strong>Failed login attempts:</strong> {{ data.failed_login_count }}</p>
+    <p><strong>Attack type:</strong> {{ data.attack_type }}</p>
+    <p><strong>Severity level:</strong> 
+        {% if data.severity == "HIGH" %}
+            <span class="severity-high">{{ data.severity }}</span>
+        {% elif data.severity == "MEDIUM" %}
+            <span class="severity-medium">{{ data.severity }}</span>
+        {% elif data.severity == "LOW" %}
+            <span class="severity-low">{{ data.severity }}</span>
+        {% else %}
+            {{ data.severity }}
+        {% endif %}
+    </p>
+    <p><strong>MITRE ATT&CK technique:</strong> {{ data.mitre_attack }}</p>
+
+    <h2>Attacker IP Attempts</h2>
+    {% if data.ip_attempts %}
+    <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Failed Attempts</th>
+        </tr>
+        {% for ip, count in data.ip_attempts.items() %}
+        <tr>
+            <td>{{ ip }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No failed login attempts detected.</p>
+    {% endif %}
+
+    <h2>Sample Failed Logs</h2>
+    {% if data.sample_failed_logs %}
+        <ul>
+            {% for log in data.sample_failed_logs %}
+                <li><code>{{ log }}</code></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No failed logs to show.</p>
+    {% endif %}
+<p><a href="{{ url_for('logout') }}">Logout</a></p>
+
+</body>
+</html>

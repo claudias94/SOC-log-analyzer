@@ -1,0 +1,163 @@
+Jan  4 00:17:01 claus-HP-Laptop-15-bs0xx CRON[23730]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 00:17:01 claus-HP-Laptop-15-bs0xx CRON[23730]: pam_unix(cron:session): session closed for user root
+Jan  4 00:55:39 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1482]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 01:17:01 claus-HP-Laptop-15-bs0xx CRON[23883]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 01:17:01 claus-HP-Laptop-15-bs0xx CRON[23883]: pam_unix(cron:session): session closed for user root
+Jan  4 01:55:39 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1482]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 02:17:01 claus-HP-Laptop-15-bs0xx CRON[24054]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 02:17:01 claus-HP-Laptop-15-bs0xx CRON[24054]: pam_unix(cron:session): session closed for user root
+Jan  4 02:55:39 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1482]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 03:10:01 claus-HP-Laptop-15-bs0xx CRON[24204]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 03:10:01 claus-HP-Laptop-15-bs0xx CRON[24204]: pam_unix(cron:session): session closed for user root
+Jan  4 03:17:01 claus-HP-Laptop-15-bs0xx CRON[24222]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 03:17:01 claus-HP-Laptop-15-bs0xx CRON[24222]: pam_unix(cron:session): session closed for user root
+Jan  4 03:30:01 claus-HP-Laptop-15-bs0xx CRON[24271]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 03:30:01 claus-HP-Laptop-15-bs0xx CRON[24271]: pam_unix(cron:session): session closed for user root
+Jan  4 11:03:53 claus-HP-Laptop-15-bs0xx systemd-logind[819]: New seat seat0.
+Jan  4 11:03:53 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Watching system buttons on /dev/input/event1 (Power Button)
+Jan  4 11:03:53 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Watching system buttons on /dev/input/event0 (Lid Switch)
+Jan  4 11:03:53 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Jan  4 11:03:53 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Watching system buttons on /dev/input/event5 (HP WMI hotkeys)
+Jan  4 11:04:11 claus-HP-Laptop-15-bs0xx gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=128) by (uid=0)
+Jan  4 11:04:11 claus-HP-Laptop-15-bs0xx systemd-logind[819]: New session c1 of user gdm.
+Jan  4 11:04:12 claus-HP-Laptop-15-bs0xx systemd: pam_unix(systemd-user:session): session opened for user gdm(uid=128) by (uid=0)
+Jan  4 11:04:40 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.43 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan  4 11:05:31 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: unable to locate daemon control file
+Jan  4 11:05:31 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: stashed password to try later in open session
+Jan  4 11:05:31 claus-HP-Laptop-15-bs0xx gdm-password]: pam_unix(gdm-password:session): session opened for user claus(uid=1000) by (uid=0)
+Jan  4 11:05:31 claus-HP-Laptop-15-bs0xx systemd-logind[819]: New session 2 of user claus.
+Jan  4 11:05:31 claus-HP-Laptop-15-bs0xx systemd: pam_unix(systemd-user:session): session opened for user claus(uid=1000) by (uid=0)
+Jan  4 11:05:32 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Jan  4 11:05:36 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: The Secret Service was already initialized
+Jan  4 11:05:36 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: The SSH agent was already initialized
+Jan  4 11:05:36 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: The PKCS#11 component was already initialized
+Jan  4 11:05:40 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Registered Authentication Agent for unix-session:2 (system bus name :1.81 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan  4 11:05:55 claus-HP-Laptop-15-bs0xx gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Jan  4 11:05:55 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Session c1 logged out. Waiting for processes to exit.
+Jan  4 11:05:56 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Removed session c1.
+Jan  4 11:05:56 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.43, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan  4 11:06:09 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  4 11:06:09 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  4 11:06:46 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  4 11:06:46 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  4 11:06:48 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 11:06:53 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  4 11:06:53 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  4 11:07:10 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/10, but it's already registered
+Jan  4 11:08:19 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  4 11:08:19 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  4 11:08:42 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  4 11:08:42 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  4 11:08:44 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  4 11:08:44 claus-HP-Laptop-15-bs0xx pkexec[2963]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  4 11:17:01 claus-HP-Laptop-15-bs0xx CRON[3384]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 11:17:01 claus-HP-Laptop-15-bs0xx CRON[3384]: pam_unix(cron:session): session closed for user root
+Jan  4 11:22:07 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  4 11:22:07 claus-HP-Laptop-15-bs0xx pkexec[3690]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  4 11:30:01 claus-HP-Laptop-15-bs0xx CRON[4008]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 11:30:01 claus-HP-Laptop-15-bs0xx CRON[4008]: pam_unix(cron:session): session closed for user root
+Jan  4 12:05:47 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 12:17:02 claus-HP-Laptop-15-bs0xx CRON[5211]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 12:17:02 claus-HP-Laptop-15-bs0xx CRON[5211]: pam_unix(cron:session): session closed for user root
+Jan  4 12:28:07 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  4 12:28:07 claus-HP-Laptop-15-bs0xx pkexec[6109]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  4 12:30:01 claus-HP-Laptop-15-bs0xx CRON[6143]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 12:30:01 claus-HP-Laptop-15-bs0xx CRON[6143]: pam_unix(cron:session): session closed for user root
+Jan  4 13:05:47 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 13:17:01 claus-HP-Laptop-15-bs0xx CRON[7037]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 13:17:01 claus-HP-Laptop-15-bs0xx CRON[7037]: pam_unix(cron:session): session closed for user root
+Jan  4 13:30:01 claus-HP-Laptop-15-bs0xx CRON[7248]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 13:30:01 claus-HP-Laptop-15-bs0xx CRON[7248]: pam_unix(cron:session): session closed for user root
+Jan  4 14:05:47 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 14:17:01 claus-HP-Laptop-15-bs0xx CRON[8191]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 14:17:01 claus-HP-Laptop-15-bs0xx CRON[8191]: pam_unix(cron:session): session closed for user root
+Jan  4 14:30:01 claus-HP-Laptop-15-bs0xx CRON[8377]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 14:30:02 claus-HP-Laptop-15-bs0xx CRON[8377]: pam_unix(cron:session): session closed for user root
+Jan  4 15:05:46 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 15:17:02 claus-HP-Laptop-15-bs0xx CRON[8705]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 15:17:02 claus-HP-Laptop-15-bs0xx CRON[8705]: pam_unix(cron:session): session closed for user root
+Jan  4 15:30:01 claus-HP-Laptop-15-bs0xx CRON[8965]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 15:30:01 claus-HP-Laptop-15-bs0xx CRON[8965]: pam_unix(cron:session): session closed for user root
+Jan  4 16:05:47 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 16:17:02 claus-HP-Laptop-15-bs0xx CRON[9166]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 16:17:02 claus-HP-Laptop-15-bs0xx CRON[9166]: pam_unix(cron:session): session closed for user root
+Jan  4 16:30:02 claus-HP-Laptop-15-bs0xx CRON[9620]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 16:30:02 claus-HP-Laptop-15-bs0xx CRON[9620]: pam_unix(cron:session): session closed for user root
+Jan  4 17:05:47 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 17:17:01 claus-HP-Laptop-15-bs0xx CRON[9968]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 17:17:02 claus-HP-Laptop-15-bs0xx CRON[9968]: pam_unix(cron:session): session closed for user root
+Jan  4 17:30:01 claus-HP-Laptop-15-bs0xx CRON[9999]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 17:30:01 claus-HP-Laptop-15-bs0xx CRON[9999]: pam_unix(cron:session): session closed for user root
+Jan  4 18:17:01 claus-HP-Laptop-15-bs0xx CRON[10159]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 18:17:01 claus-HP-Laptop-15-bs0xx CRON[10159]: pam_unix(cron:session): session closed for user root
+Jan  4 18:30:01 claus-HP-Laptop-15-bs0xx CRON[10189]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 18:30:01 claus-HP-Laptop-15-bs0xx CRON[10189]: pam_unix(cron:session): session closed for user root
+Jan  4 19:17:01 claus-HP-Laptop-15-bs0xx CRON[10326]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 19:17:01 claus-HP-Laptop-15-bs0xx CRON[10326]: pam_unix(cron:session): session closed for user root
+Jan  4 19:25:50 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 19:30:01 claus-HP-Laptop-15-bs0xx CRON[10657]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 19:30:01 claus-HP-Laptop-15-bs0xx CRON[10657]: pam_unix(cron:session): session closed for user root
+Jan  4 20:17:01 claus-HP-Laptop-15-bs0xx CRON[10834]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 20:17:01 claus-HP-Laptop-15-bs0xx CRON[10834]: pam_unix(cron:session): session closed for user root
+Jan  4 20:30:01 claus-HP-Laptop-15-bs0xx CRON[10865]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 20:30:01 claus-HP-Laptop-15-bs0xx CRON[10865]: pam_unix(cron:session): session closed for user root
+Jan  4 20:32:27 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 21:17:02 claus-HP-Laptop-15-bs0xx CRON[11732]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 21:17:02 claus-HP-Laptop-15-bs0xx CRON[11732]: pam_unix(cron:session): session closed for user root
+Jan  4 21:19:14 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  4 21:19:15 claus-HP-Laptop-15-bs0xx pkexec[11926]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  4 21:30:01 claus-HP-Laptop-15-bs0xx CRON[12114]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 21:30:01 claus-HP-Laptop-15-bs0xx CRON[12114]: pam_unix(cron:session): session closed for user root
+Jan  4 21:35:48 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 22:17:01 claus-HP-Laptop-15-bs0xx CRON[12423]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 22:17:01 claus-HP-Laptop-15-bs0xx CRON[12423]: pam_unix(cron:session): session closed for user root
+Jan  4 22:30:02 claus-HP-Laptop-15-bs0xx CRON[12445]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  4 22:30:02 claus-HP-Laptop-15-bs0xx CRON[12445]: pam_unix(cron:session): session closed for user root
+Jan  4 22:35:48 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1467]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  4 22:38:05 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Lid closed.
+Jan  4 22:38:06 claus-HP-Laptop-15-bs0xx systemd-logind[819]: Suspending...
+Jan  5 10:00:50 claus-HP-Laptop-15-bs0xx systemd-logind[804]: New seat seat0.
+Jan  5 10:00:50 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Watching system buttons on /dev/input/event1 (Power Button)
+Jan  5 10:00:50 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Watching system buttons on /dev/input/event0 (Lid Switch)
+Jan  5 10:00:50 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Jan  5 10:00:50 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Watching system buttons on /dev/input/event5 (HP WMI hotkeys)
+Jan  5 10:01:07 claus-HP-Laptop-15-bs0xx gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=128) by (uid=0)
+Jan  5 10:01:08 claus-HP-Laptop-15-bs0xx systemd-logind[804]: New session c1 of user gdm.
+Jan  5 10:01:09 claus-HP-Laptop-15-bs0xx systemd: pam_unix(systemd-user:session): session opened for user gdm(uid=128) by (uid=0)
+Jan  5 10:01:37 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.44 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan  5 10:17:01 claus-HP-Laptop-15-bs0xx CRON[1516]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  5 10:17:01 claus-HP-Laptop-15-bs0xx CRON[1516]: pam_unix(cron:session): session closed for user root
+Jan  5 10:30:01 claus-HP-Laptop-15-bs0xx CRON[1656]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan  5 10:30:01 claus-HP-Laptop-15-bs0xx CRON[1656]: pam_unix(cron:session): session closed for user root
+Jan  5 10:38:08 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: unable to locate daemon control file
+Jan  5 10:38:08 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: stashed password to try later in open session
+Jan  5 10:38:08 claus-HP-Laptop-15-bs0xx gdm-password]: pam_unix(gdm-password:session): session opened for user claus(uid=1000) by (uid=0)
+Jan  5 10:38:08 claus-HP-Laptop-15-bs0xx systemd-logind[804]: New session 4 of user claus.
+Jan  5 10:38:08 claus-HP-Laptop-15-bs0xx systemd: pam_unix(systemd-user:session): session opened for user claus(uid=1000) by (uid=0)
+Jan  5 10:38:09 claus-HP-Laptop-15-bs0xx gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Jan  5 10:38:12 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1706]: The Secret Service was already initialized
+Jan  5 10:38:12 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1706]: The PKCS#11 component was already initialized
+Jan  5 10:38:12 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1706]: The SSH agent was already initialized
+Jan  5 10:38:17 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Registered Authentication Agent for unix-session:4 (system bus name :1.89 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan  5 10:38:34 claus-HP-Laptop-15-bs0xx gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Jan  5 10:38:34 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Session c1 logged out. Waiting for processes to exit.
+Jan  5 10:38:35 claus-HP-Laptop-15-bs0xx polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.44, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan  5 10:38:35 claus-HP-Laptop-15-bs0xx systemd-logind[804]: Removed session c1.
+Jan  5 10:38:51 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  5 10:38:51 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  5 10:39:08 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  5 10:39:08 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  5 10:39:09 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1706]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan  5 10:39:12 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  5 10:39:12 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  5 10:39:24 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  5 10:39:24 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  5 10:39:27 claus-HP-Laptop-15-bs0xx gnome-keyring-daemon[1706]: asked to register item /org/freedesktop/secrets/collection/login/10, but it's already registered
+Jan  5 10:39:39 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan  5 10:39:39 claus-HP-Laptop-15-bs0xx PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan  5 10:40:54 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  5 10:40:54 claus-HP-Laptop-15-bs0xx pkexec[3345]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  5 10:54:46 claus-HP-Laptop-15-bs0xx pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan  5 10:54:46 claus-HP-Laptop-15-bs0xx pkexec[3681]: claus: Executing command [USER=root] [TTY=unknown] [CWD=/home/claus] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan  5 11:00:39 claus-HP-Laptop-15-bs0xx sudo:    claus : TTY=pts/0 ; PWD=/home/claus/ai-log-analyzer ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log logs/
+Jan  5 11:00:40 claus-HP-Laptop-15-bs0xx sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
