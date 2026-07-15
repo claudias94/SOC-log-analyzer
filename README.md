@@ -1,54 +1,86 @@
 # SOC Log Analyzer
 
-A Python-based Security Operations Center (SOC) log analysis tool that detects suspicious activity from system and authentication logs. The project automates the identification of common security events, helping analysts quickly identify potential threats without manually reviewing thousands of log entries.
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
+
+A Python-based Security Operations Center (SOC) log analysis tool that automates the detection of suspicious authentication events, brute-force attacks, and indicators of compromise (IOCs) from Linux system logs.
+
+This project demonstrates practical SOC analyst skills including log parsing, threat detection, reporting, automation, and cybersecurity-focused software development.
 
 ---
 
-## Features
+# Features
 
-- Analyze Linux authentication logs
-- Detect multiple failed login attempts
-- Identify brute-force attack patterns
-- Extract source IP addresses
-- Generate security alerts
-- Produce human-readable reports
-- Simple command-line interface
+- Parse Linux authentication logs
+- Detect brute-force attacks
+- Identify repeated failed logins
+- Detect suspicious usernames
+- Extract attacker IP addresses
+- Assign threat severity
+- Export findings to HTML
+- Export findings to JSON
+- Export findings to CSV
+- MITRE ATT&CK Mapping
+- Colored terminal output
+- Progress bars
+- Logging support
 
 ---
 
-## Technologies
+# Technologies
 
-- Python 3
+- Python
 - Regular Expressions
-- File Handling
-- Logging
 - JSON
-- Git
-- Linux
+- CSV
+- HTML
+- Logging
+- Rich
+- tqdm
+- Docker
+- GitHub Actions
 
 ---
 
-## Project Structure
+# Project Structure
 
-```
+```text
 SOC-log-analyzer/
 │
 ├── analyzer.py
+├── parser.py
+├── detector.py
+├── exporter.py
+├── report.py
+├── mitre.py
+├── config.py
+├── logger.py
+├── utils.py
+│
 ├── sample_logs/
 ├── reports/
-├── requirements.txt
-├── README.md
-└── screenshots/
+├── tests/
+├── screenshots/
+├── docs/
+│
+└── README.md
 ```
 
 ---
 
-## Installation
+# Installation
 
 Clone the repository
 
 ```bash
 git clone https://github.com/claudias94/SOC-log-analyzer.git
+```
+
+Move into the project directory
+
+```bash
 cd SOC-log-analyzer
 ```
 
@@ -60,81 +92,137 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+# Usage
 
-Analyze a log file
+Basic analysis
 
 ```bash
 python analyzer.py sample_logs/auth.log
 ```
 
-Example Output
+Generate HTML report
 
+```bash
+python analyzer.py sample_logs/auth.log --html
 ```
-=================================
-SOC LOG ANALYSIS REPORT
-=================================
 
-Failed Login Attempts: 37
+Export JSON
 
-Brute Force Alert:
-IP Address: 192.168.1.10
-Attempts: 14
+```bash
+python analyzer.py sample_logs/auth.log --json
+```
 
-Suspicious Users
-----------------
-root
-admin
-ubuntu
+Export CSV
 
-Report saved successfully.
+```bash
+python analyzer.py sample_logs/auth.log --csv
+```
+
+Generate all reports
+
+```bash
+python analyzer.py sample_logs/auth.log --html --json --csv
 ```
 
 ---
 
-## Detection Capabilities
+# Example Output
 
-- Failed SSH logins
-- Brute-force attacks
-- Suspicious authentication attempts
-- Repeated login failures
-- Basic IOC extraction
+```text
+=================================================
+
+SOC LOG ANALYZER REPORT
+
+=================================================
+
+Failed Login Attempts : 34
+
+Successful Logins     : 8
+
+Unique IP Addresses   : 6
+
+Brute Force Alerts    : 2
+
+Threat Severity       : HIGH
+
+MITRE Technique       : T1110
+
+=================================================
+```
 
 ---
 
-## Future Improvements
+# MITRE ATT&CK Mapping
 
-- MITRE ATT&CK Mapping
-- Sigma Rule Support
-- YARA Integration
-- Threat Intelligence API
-- Splunk Export
-- ELK Stack Integration
-- Web Dashboard
+| Detection | Technique |
+|-----------|-----------|
+| Brute Force | T1110 |
+| Valid Accounts | T1078 |
+| Remote Services | T1021 |
+| Account Discovery | T1087 |
+
+---
+
+# Roadmap
+
+- Live Log Monitoring
+- Flask Dashboard
+- SQLite Database
 - Email Alerts
-- Machine Learning Anomaly Detection
+- Slack Alerts
+- VirusTotal Integration
+- AbuseIPDB Integration
+- GeoIP Lookup
+- Sigma Rules
+- YARA Rules
+- Docker Support
+- REST API
 
 ---
 
-## Skills Demonstrated
+# Skills Demonstrated
 
 - Python Programming
 - Cybersecurity
-- SOC Operations
-- Log Analysis
-- Threat Detection
 - Linux
-- Regular Expressions
+- Threat Detection
+- Log Parsing
 - Secure Coding
 - Automation
+- Regular Expressions
+- MITRE ATT&CK
+- Incident Response
 
 ---
 
-## Author
+# Screenshots
 
-**Claudias Musavini**
+## Terminal
 
-Computer Security & Forensics Graduate
+*(Add screenshot here)*
 
-GitHub: https://github.com/claudias94
-LinkedIn:www.linkedin.com/in/claudias-musavini-3b0918116
+## HTML Report
+
+*(Add screenshot here)*
+
+## Dashboard
+
+*(Coming Soon)*
+
+---
+
+# Author
+
+## Claudias Musavini
+
+Bachelor of Science in Computer Security & Forensics
+
+GitHub
+
+https://github.com/claudias94
+
+---
+
+# License
+
+MIT License
