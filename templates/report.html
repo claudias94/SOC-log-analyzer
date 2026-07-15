@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>{{ app_name }} {{ app_version }}</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#eef2f7;
+
+    color:#333;
+
+    padding:40px;
+}
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.header{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    margin-bottom:30px;
+}
+
+.header h1{
+
+    font-size:34px;
+}
+
+.header p{
+
+    margin-top:10px;
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+
+    color:#666;
+
+    margin-bottom:15px;
+}
+
+.value{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:#1565c0;
+}
+
+.section{
+
+    background:white;
+
+    margin-top:20px;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:15px;
+}
+
+th{
+
+    background:#1565c0;
+
+    color:white;
+
+    padding:12px;
+}
+
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid #ddd;
+}
+
+.low{
+    color:green;
+    font-weight:bold;
+}
+
+.medium{
+    color:orange;
+    font-weight:bold;
+}
+
+.high{
+
+    color:red;
+
+    font-weight:bold;
+}
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>{{ app_name }}</h1>
+
+<p>
+
+Version {{ app_version }}
+
+</p>
+
+<p>
+
+Generated:
+
+<strong>{{ timestamp }}</strong>
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Failed Logins</h3>
+
+<div class="value">
+
+{{ results.failed_logins }}
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Successful Logins</h3>
+
+<div class="value">
+
+{{ results.successful_logins }}
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Unique IPs</h3>
+
+<div class="value">
+
+{{ results.unique_ips }}
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Threat Level</h3>
+
+<div class="value {{ results.threat_level|lower }}">
+
+{{ results.threat_level }}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Top Attacker</h2>
+
+<table>
+
+<tr>
+
+<th>IP Address</th>
+
+<th>Attempts</th>
+
+</tr>
+
+<tr>
+
+<td>{{ results.top_attacker or "None" }}</td>
+
+<td>{{ results.top_attempts }}</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Threat Alerts</h2>
+
+{% if results.brute_force_alerts %}
+
+<table>
+
+<tr>
+
+<th>IP</th>
+
+<th>Attempts</th>
+
+<th>Severity</th>
+
+<th>MITRE</th>
+
+</tr>
+
+{% for alert in results.brute_force_alerts %}
+
+<tr>
+
+<td>{{ alert.ip }}</td>
+
+<td>{{ alert.attempts }}</td>
+
+<td>{{ alert.severity }}</td>
+
+<td>{{ alert.mitre }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<p>No brute-force attacks detected.</p>
+
+{% endif %}
+
+</div>
+
+<div class="section">
+
+<h2>MITRE ATT&CK Mapping</h2>
+
+<p>
+
+Technique: <strong>T1110 - Brute Force</strong>
+
+</p>
+
+</div>
+
+<footer>
+
+{{ app_name }} {{ app_version }}
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

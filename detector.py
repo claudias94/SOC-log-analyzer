@@ -5,6 +5,7 @@ Detection engine for the SOC Log Analyzer.
 """
 
 from collections import Counter
+
 from logger import logger
 from config import (
     FAILED_LOGIN_THRESHOLD,
@@ -14,31 +15,31 @@ from config import (
 
 
 class DetectionEngine:
+    """
+    Detection engine for authentication events.
+    """
 
     def __init__(self, events):
         self.events = events
 
     def analyze(self):
-
         failed = []
         successful = []
 
+        # Separate failed and successful logins
         for event in self.events:
-
             if event["type"] == "FAILED_LOGIN":
                 failed.append(event)
-
             elif event["type"] == "SUCCESSFUL_LOGIN":
                 successful.append(event)
 
+        # Count failed logins by IP
         ip_counter = Counter(event["ip"] for event in failed)
 
         brute_force = []
 
         for ip, attempts in ip_counter.items():
-
             if attempts >= FAILED_LOGIN_THRESHOLD:
-
                 brute_force.append(
                     {
                         "ip": ip,
@@ -48,16 +49,34 @@ class DetectionEngine:
                     }
                 )
 
+        # Determine overall threat level
+        threat_level = "LOW"
+
+        if brute_force:
+            highest = max(alert["attempts"] for alert in brute_force)
+
+            if highest >= CRITICAL_SEVERITY_THRESHOLD:
+                threat_level = "CRITICAL"
+            elif highest >= HIGH_SEVERITY_THRESHOLD:
+                threat_level = "HIGH"
+            else:
+                threat_level = "MEDIUM"
+
+        # Identify top attacking IP
+        top_attacker = None
+        top_attempts = 0
+
+        if ip_counter:
+            top_attacker, top_attempts = ip_counter.most_common(1)[0]
+
         summary = {
-
             "failed_logins": len(failed),
-
             "successful_logins": len(successful),
-
             "unique_ips": len(ip_counter),
-
+            "threat_level": threat_level,
+            "top_attacker": top_attacker,
+            "top_attempts": top_attempts,
             "brute_force_alerts": brute_force,
-
         }
 
         logger.info("Detection completed.")
@@ -65,7 +84,6 @@ class DetectionEngine:
         return summary
 
     def get_severity(self, attempts):
-
         if attempts >= CRITICAL_SEVERITY_THRESHOLD:
             return "CRITICAL"
 

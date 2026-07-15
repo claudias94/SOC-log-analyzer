@@ -1,0 +1,9 @@
+{
+    "failed_logins": 4,
+    "successful_logins": 1,
+    "unique_ips": 2,
+    "threat_level": "LOW",
+    "top_attacker": "192.168.1.25",
+    "top_attempts": 3,
+    "brute_force_alerts": []
+}
