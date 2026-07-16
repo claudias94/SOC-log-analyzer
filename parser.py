@@ -6,6 +6,7 @@ Parses different log formats and returns structured events.
 
 import re
 from pathlib import Path
+
 from logger import logger
 
 
@@ -40,7 +41,7 @@ class LogParser:
         events = []
 
         failed_regex = re.compile(
-            r"Failed password for (invalid user )?(?P<user>\S+) from (?P<ip>\d+\.\d+\.\d+\.\d+)"
+            r"Failed password for (?P<invalid>invalid user )?(?P<user>\S+) from (?P<ip>\d+\.\d+\.\d+\.\d+)"
         )
 
         success_regex = re.compile(
@@ -52,19 +53,28 @@ class LogParser:
             failed = failed_regex.search(line)
 
             if failed:
+
+                event_type = (
+                    "INVALID_USER"
+                    if failed.group("invalid")
+                    else "FAILED_LOGIN"
+                )
+
                 events.append(
                     {
-                        "type": "FAILED_LOGIN",
+                        "type": event_type,
                         "username": failed.group("user"),
                         "ip": failed.group("ip"),
                         "raw": line.strip(),
                     }
                 )
+
                 continue
 
             success = success_regex.search(line)
 
             if success:
+
                 events.append(
                     {
                         "type": "SUCCESSFUL_LOGIN",
