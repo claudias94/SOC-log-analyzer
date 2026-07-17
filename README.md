@@ -1,90 +1,119 @@
-# SOC Log Analyzer
+# 🛡️ SOC Log Analyzer v3.0
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Active-success.svg)
-
-A Python-based Security Operations Center (SOC) log analysis tool that automates the detection of suspicious authentication events, brute-force attacks, and indicators of compromise (IOCs) from Linux system logs.
-
-This project demonstrates practical SOC analyst skills including log parsing, threat detection, reporting, automation, and cybersecurity-focused software development.
+A professional **Security Operations Center (SOC) Log Analyzer** built with **Python** and **Flask** for detecting authentication threats, analyzing Linux security logs, generating security reports, and visualizing incidents through an interactive dashboard.
 
 ---
 
-# Features
+## 🎯 Project Goals
 
-- Parse Linux authentication logs
+The SOC Log Analyzer helps security analysts:
+
 - Detect brute-force attacks
-- Identify repeated failed logins
-- Detect suspicious usernames
-- Extract attacker IP addresses
-- Assign threat severity
-- Export findings to HTML
-- Export findings to JSON
-- Export findings to CSV
-- MITRE ATT&CK Mapping
-- Colored terminal output
-- Progress bars
-- Logging support
+- Detect password spraying
+- Detect username enumeration
+- Detect distributed login attacks
+- Calculate a risk score
+- Map detections to the MITRE ATT&CK framework
+- Generate multiple report formats
+- Visualize results through a web dashboard
 
 ---
 
-# Technologies
+## ✨ Key Features
 
-- Python
-- Regular Expressions
-- JSON
-- CSV
-- HTML
-- Logging
-- Rich
-- tqdm
-- Docker
-- GitHub Actions
+- 🔐 Authentication log analysis
+- 🚨 Modular detection engine
+- 📊 Interactive Flask dashboard
+- 🎯 MITRE ATT&CK mapping
+- 📈 Risk scoring engine
+- 📄 HTML reports
+- 📄 JSON reports
+- 📄 CSV reports
+- 📄 Markdown reports
+- 💡 Security recommendations
+- 📥 Downloadable reports
+- 🎨 Modern dark SOC dashboard
+---
+
+# 🏗️ System Architecture
+
+```text
+                Linux Authentication Logs
+                         │
+                         ▼
+                  ┌───────────────┐
+                  │  Log Parser   │
+                  └───────────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Detection Engine│
+                └─────────────────┘
+                         │
+      ┌──────────────────┼──────────────────┐
+      ▼                  ▼                  ▼
+Brute Force      Password Spray    Username Enumeration
+      │                  │                  │
+      └──────────────────┼──────────────────┘
+                         ▼
+                 Risk Scoring Engine
+                         │
+                         ▼
+              MITRE ATT&CK Mapping
+                         │
+        ┌────────────────┼────────────────┐
+        ▼                ▼                ▼
+    HTML Report     JSON Report     CSV / Markdown
+                         │
+                         ▼
+                 Flask Web Dashboard
+```
 
 ---
 
-# Project Structure
+# 📁 Project Structure
 
 ```text
 SOC-log-analyzer/
 │
 ├── analyzer.py
-├── parser.py
-├── detector.py
-├── exporter.py
-├── report.py
-├── mitre.py
+├── app.py
 ├── config.py
+├── dashboard.py
+├── parser.py
+├── report.py
+├── exporter.py
 ├── logger.py
-├── utils.py
 │
-├── sample_logs/
+├── detector/
+│   ├── engine.py
+│   ├── brute_force.py
+│   ├── password_spray.py
+│   ├── enumeration.py
+│   ├── distributed.py
+│   ├── suspicious.py
+│   ├── recommendations.py
+│   ├── scoring.py
+│   └── utils.py
+│
+├── templates/
+├── static/
 ├── reports/
+├── logs/
 ├── tests/
-├── screenshots/
-├── docs/
-│
 └── README.md
-```
+```---
 
----
+# ⚙️ Installation
 
-# Installation
-
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/claudias94/SOC-log-analyzer.git
-```
-
-Move into the project directory
-
-```bash
 cd SOC-log-analyzer
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -92,137 +121,140 @@ pip install -r requirements.txt
 
 ---
 
-# Usage
+# 🚀 Quick Start
 
-Basic analysis
-
-```bash
-python analyzer.py sample_logs/auth.log
-```
-
-Generate HTML report
+Run the analyzer:
 
 ```bash
-python analyzer.py sample_logs/auth.log --html
+python analyzer.py
 ```
 
-Export JSON
+Launch the dashboard:
 
 ```bash
-python analyzer.py sample_logs/auth.log --json
+python app.py
 ```
 
-Export CSV
-
-```bash
-python analyzer.py sample_logs/auth.log --csv
-```
-
-Generate all reports
-
-```bash
-python analyzer.py sample_logs/auth.log --html --json --csv
-```
-
----
-
-# Example Output
+Open your browser:
 
 ```text
-=================================================
+http://127.0.0.1:5000
+```---
+## 📸 Screenshots
 
-SOC LOG ANALYZER REPORT
+### Web Dashboard
 
-=================================================
+![Dashboard](screenshots/dashboard-home.png)
 
-Failed Login Attempts : 34
+---
 
-Successful Logins     : 8
+### HTML Security Report
 
-Unique IP Addresses   : 6
+![HTML Report](screenshots/html-report.png)
 
-Brute Force Alerts    : 2
+---
 
-Threat Severity       : HIGH
+### Terminal Dashboard
 
-MITRE Technique       : T1110
+![Terminal Dashboard](screenshots/terminal-dashboard.png)
 
-=================================================
+# 🛠️ Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python 3 |
+| Web Framework | Flask |
+| Templates | Jinja2 |
+| Frontend | HTML5, CSS3 |
+| Data Formats | JSON, CSV, Markdown, HTML |
+| Logging | Python Logging |
+| Security | MITRE ATT&CK Framework |
+| Operating System | Linux (Ubuntu) |
+| Version Control | Git & GitHub |
+
+---
+
+# 📸 Screenshots
+
+The project includes screenshots demonstrating:
+
+- Dashboard Overview
+- Threat Assessment
+- MITRE ATT&CK Mapping
+- Security Recommendations
+- Generated Reports
+- Rich Terminal Dashboard
+
+Example repository structure:
+
+```text
+screenshots/
+├── dashboard-home.png
+├── dashboard-threats.png
+├── dashboard-downloads.png
+├── terminal-dashboard.png
+└── html-report.png
 ```
 
 ---
 
-# MITRE ATT&CK Mapping
+# 🧪 Detection Capabilities
 
-| Detection | Technique |
-|-----------|-----------|
-| Brute Force | T1110 |
-| Valid Accounts | T1078 |
-| Remote Services | T1021 |
-| Account Discovery | T1087 |
+Current detection modules include:
 
----
-
-# Roadmap
-
-- Live Log Monitoring
-- Flask Dashboard
-- SQLite Database
-- Email Alerts
-- Slack Alerts
-- VirusTotal Integration
-- AbuseIPDB Integration
-- GeoIP Lookup
-- Sigma Rules
-- YARA Rules
-- Docker Support
-- REST API
+- ✅ Brute Force Detection
+- ✅ Password Spraying Detection
+- ✅ Username Enumeration
+- ✅ Distributed Authentication Attacks
+- ✅ Suspicious Login Detection
+- ✅ Risk Scoring
+- ✅ MITRE ATT&CK Mapping
+- ✅ Security Recommendations
 
 ---
 
-# Skills Demonstrated
+# 📄 Generated Reports
 
-- Python Programming
-- Cybersecurity
-- Linux
-- Threat Detection
-- Log Parsing
-- Secure Coding
-- Automation
-- Regular Expressions
-- MITRE ATT&CK
-- Incident Response
+The analyzer automatically generates:
+
+- HTML Report
+- JSON Report
+- CSV Report
+- Markdown Report
+
+Reports are accessible directly from the Flask dashboard.
 
 ---
 
-# Screenshots
+# 🚀 Future Roadmap
 
-## Terminal
+The SOC Log Analyzer is the first module of the **Claus SOC Toolkit**.
 
-*(Add screenshot here)*
+Upcoming modules include:
 
-## HTML Report
-
-*(Add screenshot here)*
-
-## Dashboard
-
-*(Coming Soon)*
+- Linux Incident Response Toolkit
+- IOC Extractor
+- Threat Intelligence Engine
+- AI Security Assistant
+- SIEM Dashboard
+- Automated Threat Hunting
 
 ---
 
-# Author
+# 👤 Author
 
-## Claudias Musavini
+**Claudias Musavini**
 
-Bachelor of Science in Computer Security & Forensics
+Computer Security & Forensics Graduate
 
-GitHub
+Cybersecurity | SOC | Python | Digital Forensics | Incident Response
+
+GitHub:
 
 https://github.com/claudias94
 
 ---
 
-# License
+# 📜 License
 
-MIT License
+This project is released under the MIT License.

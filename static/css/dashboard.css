@@ -1,0 +1,345 @@
+```css
+/* ==========================================================
+   Claus SOC Toolkit
+   SOC Log Analyzer Dashboard
+   Version 3.0
+========================================================== */
+
+body{
+    background:#0f172a;
+    color:#f8fafc;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+
+    border-radius:16px;
+
+    padding:45px;
+
+    margin-top:25px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    border:1px solid #334155;
+
+    box-shadow:0 0 25px rgba(56,189,248,.15);
+
+}
+
+.hero h1{
+
+    color:#38bdf8;
+
+    font-size:48px;
+
+    font-weight:700;
+
+}
+
+.hero .lead{
+
+    color:#cbd5e1;
+
+    font-size:22px;
+
+}
+
+.version{
+
+    color:#94a3b8;
+
+}
+
+/* ==========================
+   KPI CARDS
+========================== */
+
+.metric-card{
+
+    background:#1e293b;
+
+    border:none;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    color:white;
+
+    text-align:center;
+
+    height:100%;
+
+    box-shadow:0 0 12px rgba(0,0,0,.25);
+
+}
+
+.metric-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 30px rgba(56,189,248,.25);
+
+}
+
+.metric-card h5{
+
+    color:#cbd5e1;
+
+    margin-top:10px;
+
+}
+
+.metric-card h2{
+
+    color:#38bdf8;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+}
+
+.metric-icon{
+
+    font-size:42px;
+
+    color:#38bdf8;
+
+}
+
+/* ==========================
+   DASHBOARD PANELS
+========================== */
+
+.dashboard-card{
+
+    background:#1e293b;
+
+    border:none;
+
+    border-radius:14px;
+
+    color:white;
+
+    box-shadow:0 0 12px rgba(0,0,0,.25);
+
+}
+
+.dashboard-card .card-header{
+
+    background:#334155;
+
+    color:#38bdf8;
+
+    border-bottom:none;
+
+    font-weight:bold;
+
+}
+
+.dashboard-card .card-body{
+
+    background:#1e293b;
+
+}
+
+/* ==========================
+   TABLES
+========================== */
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table-dark{
+
+    --bs-table-bg:#1e293b;
+
+    --bs-table-striped-bg:#273549;
+
+    --bs-table-hover-bg:#334155;
+
+}
+
+/* ==========================
+   BADGES
+========================== */
+
+.badge{
+
+    font-size:14px;
+
+    padding:8px 14px;
+
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress{
+
+    background:#334155;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    font-weight:bold;
+
+    font-size:15px;
+
+}
+
+/* ==========================
+   ALERTS
+========================== */
+
+.alert{
+
+    border:none;
+
+}
+
+/* ==========================
+   LIST GROUP
+========================== */
+
+.list-group-item{
+
+    border-color:#334155;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    padding:10px 20px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    color:#94a3b8;
+
+    margin-top:40px;
+
+}
+
+footer hr{
+
+    border-color:#334155;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:25px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.metric-card h2{
+
+font-size:30px;
+
+}
+
+}
+```
+
+/* ==========================
+   Footer
+========================== */
+
+.footer {
+    margin-top: 50px;
+    background: #1d2636;
+    color: #d7dde8;
+    padding: 25px;
+    border-top: 3px solid #2fa8ff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-item {
+    text-align: center;
+    min-width: 150px;
+}
+
+.footer-item strong {
+    color: #2fa8ff;
+}
+
+.status-online {
+    color: #31d158;
+    font-weight: bold;
+}
+/* ==========================
+   Download Reports
+========================== */
+
+.download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.download-btn {
+    background: #2fa8ff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #157bd1;
+    transform: translateY(-2px);
+}
