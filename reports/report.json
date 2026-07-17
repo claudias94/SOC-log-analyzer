@@ -1,9 +1,18 @@
 {
-    "failed_logins": 4,
+    "failed_logins": 3,
     "successful_logins": 1,
+    "invalid_user_attempts": 1,
     "unique_ips": 2,
+    "risk_score": 11,
     "threat_level": "LOW",
     "top_attacker": "192.168.1.25",
-    "top_attempts": 3,
-    "brute_force_alerts": []
+    "top_attempts": 2,
+    "brute_force_alerts": [],
+    "password_spraying_alerts": [],
+    "username_enumeration_alerts": [],
+    "distributed_attack_alerts": [],
+    "suspicious_login_alerts": [],
+    "recommendations": [
+        "Continue monitoring authentication logs."
+    ]
 }

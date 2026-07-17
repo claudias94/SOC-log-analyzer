@@ -1,18 +1,37 @@
+"""
+tests/test_report.py
+
+Test the ReportGenerator module.
+"""
+
 from parser import LogParser
 from detector import DetectionEngine
 from report import ReportGenerator
 
-# Parse logs
-parser = LogParser("logs/auth.log")
-events = parser.parse_auth_log()
 
-# Run detection
-engine = DetectionEngine(events)
-results = engine.analyze()
+def main():
+    """
+    Generate an HTML report from sample logs.
+    """
 
-# Generate report
-report = ReportGenerator()
+    # Parse logs
+    parser = LogParser("logs/auth.log")
+    events = parser.parse_auth_log()
 
-output = report.generate_html(results)
+    # Run detection
+    engine = DetectionEngine(events)
+    results = engine.analyze()
 
-print(f"\nReport generated successfully:\n{output}")
+    # Generate report
+    report = ReportGenerator(results)
+
+    output = report.generate_html()
+
+    print("\n====================================")
+    print("Report generated successfully!")
+    print("====================================")
+    print(output)
+
+
+if __name__ == "__main__":
+    main()

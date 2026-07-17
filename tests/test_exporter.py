@@ -1,18 +1,36 @@
+"""
+tests/test_exporter.py
+
+Test the Exporter module.
+"""
+
 from parser import LogParser
 from detector import DetectionEngine
 from exporter import Exporter
 
-parser = LogParser("logs/auth.log")
-events = parser.parse_auth_log()
 
-engine = DetectionEngine(events)
-results = engine.analyze()
+def main():
+    """
+    Test all exporter formats.
+    """
 
-exporter = Exporter()
+    parser = LogParser("logs/auth.log")
+    events = parser.parse_auth_log()
 
-json_file = exporter.export_json(results)
-csv_file = exporter.export_csv(results)
+    engine = DetectionEngine(events)
+    results = engine.analyze()
 
-print("\nReports generated successfully:\n")
-print(json_file)
-print(csv_file)
+    exporter = Exporter(results)
+
+    outputs = exporter.export_all()
+
+    print("\n====================================")
+    print("Export completed successfully!")
+    print("====================================")
+
+    for fmt, path in outputs.items():
+        print(f"{fmt.upper():10} -> {path}")
+
+
+if __name__ == "__main__":
+    main()

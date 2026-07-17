@@ -1,7 +1,9 @@
 Metric,Value
-Failed Logins,4
-Successful Logins,1
-Unique IPs,2
-Threat Level,LOW
-Top Attacker,192.168.1.25
-Top Attempts,3
+failed_logins,3
+successful_logins,1
+invalid_user_attempts,1
+unique_ips,2
+risk_score,11
+threat_level,LOW
+top_attacker,192.168.1.25
+top_attempts,2
